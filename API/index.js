@@ -27,6 +27,6 @@ app.delete("/api/delete/:id", async (req, res) => {
   res.json(await Note.deleteOne({_id:req.params.id}));
 });
 
-app.listen(3001, (req, res) => {
+app.listen(process.env.PORT || 3001, (req, res) => {
   console.log("ServerUp");
 });
